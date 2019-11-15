@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-compatible" content="ie=edge">
+  <title> Jogo da Memória</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+
+<body onload="shuffle()">
+
+  <!--Cabeçalho do jogo -->
+  <div id="cabecalho">
+    <h1>Jogo Da Memória</h1>
+
+    <div id="userInput">
+      <label>Digite Seu Nome e Sobrenome Para Iniciar o Jogo</label><br>
+      <input type="text" name="valor" id="valor" maxlength="20" required>
+      <input type="submit" name="submit" onclick="capturar()" value="Enviar">
+    </div>  
+
+    <div id="userAndScore">
+      <span>Jogador:</span>
+      <span id="valorDigitado"></span>
+      <p>Pontos: <span id="valorScore">0</span></p>
+    </div>
+  </div>
+  <!--Fim Cabeçalho do jogo -->
+
+
+  <!--Corpo do jogo -->
+  <div id="cardboard"></div>
+  <!--Fim Corpo do jogo -->
+
+
+  <!-- Modal -->
+  <div id="simpleModal" class="modal" id="displayModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="closeBtn">&times;</span>
+        <h2>Parabéns, <span id="winner"></span>!</h2>
+        <br>
+        <h2>Você venceu.</h2>
+      </div>
+      <div class="modal-footer">
+        <button class="button" id="btnNewGame">Novo Jogo</button>
+      </div>
+    </div>
+  </div>
+  <!--Fim Modal -->
+
+  
+
+  <script src="main.js"></script>
+</body>
+
+</html>
